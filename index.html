@@ -19,12 +19,6 @@
 </head>
 
 <body>
-
-
-
-
-
-
     <nav class="navbar navbar-expand-lg navigation">
         <div class="container-fluid">
             <div class="logo" style="padding-top:15px;padding-bottom:15px ;">
@@ -65,11 +59,12 @@
         <div class="sec1">
             <div class="sec1a">
                 <h1> <span>Get Help</span> with your <br> on-demand</h1>
-                <h1>
+                <h1 class="typing">
                     <a href="" class="typewrite" data-period="500" data-type='[ "Laundry🧺", "Homework 📝", "Fast 🚀 ", "Web Design 💻","Photography 📷","Cleaning 🧹","Errands 🏃🏿‍♂️","Research 🔍","Copywriting 🖊️","Translation 📚","Online Tasks 🌐","Assembly 🔨 ","Repairs🔧 ","Offline Tasks 🏘️ ", "Boring Tasks! 😄"]'>
                         <span class="wrap"></span>
                     </a>
                 </h1>
+
                 <div class="sec1but">
                     <a href="#" class="task1" onclick="openNav()">Post a task</a>
                     <a href="#" class="browse">Browse tasks</a>
@@ -83,17 +78,12 @@
 
 
     <section>
-
-
-
-
-
         <div class="sec2">
             <div class="sec2head">
                 <h5>How Indozi works</h5>
             </div>
-            <div class="row " style="align-items:center;justify-content:space-evenly; width: 100%; padding-bottom: 40px;">
-                <div class="col-md-6">
+            <div class="sec2body">
+                <div class="sec2a">
                     <div class="sec2img">
                         <img src="./images/post.png" alt="">
                     </div>
@@ -105,7 +95,7 @@
                         <p>Create your task with a description, <br> time, location and budget</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="sec2a">
                     <div class="sec2img">
                         <img src="./images/review.png" alt="">
                     </div>
@@ -117,7 +107,7 @@
                         <p>Checkout all the offers by Taskers <br> and assign the task to your top <br> choice</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="sec2a">
                     <div class="sec2img">
                         <img src="./images/secure.png" alt="" style="width: 100px">
                     </div>
@@ -129,7 +119,7 @@
                         <p>Payments are secured in an escrow <br> account and only released once a <br> task has been completed</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="sec2a">
                     <div class="sec2img">
                         <img src="./images/complete.png" alt="" style="width: 100px">
                     </div>
@@ -141,15 +131,11 @@
                         <p>Tasker gets the job done, requests <br> for payment, and once the Poster is <br> satisfied, payment is made</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-
-
-
     </section>
+
+
 
 
 
@@ -218,6 +204,29 @@
             <i class="fa fa-linkedin" aria-hidden="true"></i>
         </div>
     </footer>
+    <button class="open-button" onclick="openForm()"><i class="bi bi-chat-left-fill" style="color: white;"></i></button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Hi there 👋</h1>
+            <p>Welcome to our website. Let's help solve any problems you might be facing on the platform 🎉</p>
+            <label for="msg"><b>🟢 We reply immediately</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
     <script src="./script.js"></script>
 </body>
 
